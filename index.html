@@ -11,32 +11,34 @@
     </div>
     <div id="main" class="container=fluid">
         <div class="col">
-            <ul class="row" id="commodities"></ul>
+            <ul class="row" ></ul>
         </div>
     </div>
     <div>
         <form class="picker">
-            <label for="commodities-selection"></label>
-            <select id="commodities-selection" id="">
+            <label for="goods-selection"></label>
+            <select id="goods-selection">
                 <option>supply</option>
                 <option>demand</option>
                 <option>contraband</option>
-                <option>another option</option>
+                <option>station</option>
             </select>
+        </form>
+
             <table>
                 <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Sold At</th>
-                    <th>Demand At</th>
-                    <th>Contraband</th>
-                </tr>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Sold At</th>
+                        <th>Demand At</th>
+                        <th>Contraband</th>
+                 </tr>
                 </thead>
-
+                <tbody id="goods"></tbody>
             </table>
 
-        </form>
+
     </div>
     <script src="main.js"></script>
 </body>
