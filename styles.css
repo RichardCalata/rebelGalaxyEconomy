@@ -7,3 +7,34 @@ body {
     text-align: center;
     background-color: darkorange;
 }
+
+table {
+    border-collapse: collapse;
+    margin:auto;
+}
+
+h1 {
+    margin:auto;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.userform {
+    text-align: center;
+    margin:auto;
+
+}
+
+.pickerTop {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+.pickerBottom {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}

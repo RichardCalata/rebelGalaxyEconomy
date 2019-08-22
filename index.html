@@ -15,16 +15,28 @@
         </div>
     </div>
     <div>
-        <form class="picker">
-            <label for="goods-selection"></label>
-            <select id="goods-selection">
-                <option>supply</option>
-                <option>demand</option>
-                <option>contraband</option>
-                <option>station</option>
-            </select>
+        <div class="userform">
+        <form action="picker" class="pickerTop">
+            <label for="action-selection">
+                <select name="action" id="action-selection">
+                    <option>edit</option>
+                    <option></option>
+                </select>
+            </label>
+        </form>
+        <form class="pickerBottom" action="submit">
+            <label for="goods-name"></label>
+                <input type="text" id="goods-name" onkeyup="updateName()">
+            <label for="goods-sold"></label>
+                <input type="text" id="goods-sold" onkeyup="updateSold()">
+            <label for="goods-bought"></label>
+                <input type="text" id="goods-bought" onkeyup="updateBuy()">
+            <label for="goods-contraband"></label>
+                <input type="text" id="goods-contraband" onkeyup="updateLegal()">
+            <input type="submit" value="add" onclick="updateGoods()" id="submit">
         </form>
 
+        </div>
             <table>
                 <thead>
                     <tr>
@@ -37,8 +49,9 @@
                 </thead>
                 <tbody id="goods"></tbody>
             </table>
+        </div>
 
-
+    </div>
     </div>
     <script src="main.js"></script>
 </body>
