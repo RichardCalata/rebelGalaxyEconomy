@@ -20,40 +20,45 @@ function renderGoods(goods){
     return html
 }
 
-function updateName(){
-    var input = document.getElementById("goods-name");
-    var newName = input.value;
-    return newName
+// function updateName(){
+//     var input = document.getElementById("goods-name");
+//     var newName = input.value;
+//     return newName
+//
+// }
+//
+// function updateSold(){
+//     var input = document.getElementById("goods-sold");
+//     var newSold = input.value;
+//     return newSold
+//
+// }
+//
+// function updateBuy(){
+//     var input = document.getElementById("goods-bought");
+//     var newBuy = input.value;
+//     return newBuy
+//
+// }
+//
+// function updateLegal(){
+//     var input = document.getElementById("goods-contraband");
+//     var newcontraband = input.value;
+//     return newcontraband
+// }
 
-}
-
-function updateSold(){
-    var input = document.getElementById("goods-sold");
-    var newSold = input.value;
-    return newSold
-
-}
-
-function updateBuy(){
-    var input = document.getElementById("goods-bought");
-    var newBuy = input.value;
-    return newBuy
-
-}
-
-function updateLegal(){
-    var input = document.getElementById("goods-contraband");
-    var newcontraband = input.value;
-    return newcontraband
-}
-
-function updateGoods(updateName,updateSold,updateBuy,updateLegal){
+function updateGoods(){
+    var input = document.getElementById('goods-name');
+    var input2 = document.getElementById('goods-sold');
+    var input3 = document.getElementById('goods-bought');
+    var input4 = document.getElementById('goods-contraband');
     var newObj= {id:'',name:'',soldAt:'',buyAt:'',contraband:''};
-    newObj.name = newName;
-    newObj.soldAt = newSold;
-    newObj.buyAt = newBuy;
-    newObj.contraband = newcontraband;
-    return newObj;
+    newObj.name = input.value;
+    newObj.soldAt = input2.value;
+    newObj.buyAt = input3.value;
+    newObj.contraband = input4.value;
+    goods.push(newObj)
+    return goods
 }
 
 function updateScreen(e){
