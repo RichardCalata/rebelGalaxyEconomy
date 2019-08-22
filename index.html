@@ -31,8 +31,11 @@
                 <input type="text" id="goods-sold" >
             <label for="goods-bought"></label>
                 <input type="text" id="goods-bought" >
-            <label for="goods-contraband"></label>
-                <input type="text" id="goods-contraband" >
+            <label for="goods-contraband">Contraband</label>
+            <select name="contraband" id="goods-contraband">
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+            </select>
             <input type="submit" value="add" onclick="updateGoods()" id="submit">
         </form>
 
