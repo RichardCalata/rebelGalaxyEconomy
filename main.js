@@ -2,7 +2,9 @@
 
 function renderGood(good) {
     var html = '<tr class="good">';
-    html += '<td>' +  '<input type="submit" id="edit" value="edit" href="modal">'+ '</td>';
+    html += '<td>' +  '<input type="submit" id="edit" value="edit" href="modal" onclick="openM()"{\n' +
+        '    modal.style.display = "block";\n' +
+        '}">'+ '</td>';
     html += '<td>' + good.name + '</td>';
     html += '<td>' + good.soldAt + '</td>';
     html += '<td>' + good.buyAt + '</td>';
@@ -77,7 +79,7 @@ var btn = document.getElementById("edit");
 
 var span = document.getElementsByClassName('close')[0];
 
-btn.onclick = function(){
+function openM(){
     modal.style.display = "block";
 };
 
