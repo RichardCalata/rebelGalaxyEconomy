@@ -69,3 +69,7 @@ td, th {
     font-weight: bold;
     font-size: 28px;
 }
+
+input[type='text'], textarea {
+    background-color: palegoldenrod;
+}

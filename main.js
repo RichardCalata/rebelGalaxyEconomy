@@ -26,13 +26,17 @@ function renderGoods(goods){
 function updateGoods(){
     var input = document.getElementById('goods-name');
     var input2 = document.getElementById('goods-sold');
-    var input3 = document.getElementById('goods-bought');
-    var input4 = document.getElementById('goods-contraband');
-    var newObj= {id:'',name:'',soldAt:'',cost:'',buyAt:'',price:'',contraband:''};
+    var input3 = document.getElementById('buy-price');
+    var input4 = document.getElementById('goods-bought');
+    var input5 = document.getElementById('buy-price');
+    var input6 = document.getElementById('goods-contraband');
+    var newObj= {id:'',name:'',soldAt:'',cost:'', availableAt: '',price:'',contraband:''};
     newObj.name = input.value;
     newObj.soldAt = input2.value;
-    newObj.buyAt = input3.value;
-    newObj.contraband = input4.value;
+    newObj.cost = input3.value;
+    newObj.buyAt = input4.value;
+    newObj.price = input5.value;
+    newObj.contraband = input6.value;
     goods.push(newObj)
     return goods
 }
@@ -60,13 +64,13 @@ function openModal(){
 
 var goods = [
 
-    {id: '', name:'Obtanium Ore', soldAt:'Texas', cost:'2000',  buyAt:'Dutch',price:'2500', contraband: false },
-    {id: '', name:'Processors', soldAt:'Backbone', cost: '300', buyAt:'Montana',price: '400', contraband: false},
-    {id: '', name:'Progenitor Shard', soldAt:'', cost: '5000',buyAt:'Backbone',price:'7500', contraband: 'no'},
-    {id: '', name:'Pulp Novel', soldAt:'Sexton',cost:'250', buyAt:'Lousiana',price:'300', contraband: 'no'},
-    {id: '', name:'Pure Water', soldAt:'Colorado',cost:'2500', buyAt:'Texas',price:'2800', contraband: 'no'},
+    {id: '', name:'Obtanium Ore', soldAt:'Texas', cost:'2000', availableAt: 'Dutch',price:'2500', contraband: false },
+    {id: '', name:'Processors', soldAt:'Backbone', cost: '300', availableAt: 'Montana',price: '400', contraband: false},
+    {id: '', name:'Progenitor Shard', soldAt:'', cost: '5000', availableAt: 'Backbone',price:'7500', contraband: 'no'},
+    {id: '', name:'Pulp Novel', soldAt:'Sexton',cost:'250', availableAt: 'Lousiana',price:'300', contraband: 'no'},
+    {id: '', name:'Pure Water', soldAt:'Colorado',cost:'2500', availableAt: 'Texas',price:'2800', contraband: 'no'},
 
-    {id: '', name:'Void', soldAt:'',cost:'7800', buyAt:'',price:'9000',contraband:'Yes'}
+    {id: '', name:'Void', soldAt:'',cost:'7800', availableAt: '',price:'9000',contraband:'Yes'}
 ];
 
 var tbody = document.querySelector('#goods');
