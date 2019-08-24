@@ -6,6 +6,7 @@ body {
 #header {
     text-align: center;
     background-color: darkorange;
+    border-radius: 5px;
 }
 
 table {

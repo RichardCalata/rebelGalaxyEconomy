@@ -7,7 +7,9 @@ function renderGood(good) {
         '}">'+ '</td>';
     html += '<td>' + good.name + '</td>';
     html += '<td>' + good.soldAt + '</td>';
+    html += '<td>' + good.cost + '</td>';
     html += '<td>' + good.buyAt + '</td>';
+    html += '<td>' + good.price + '</td>';
     html += '<td>' + good.contraband + '</td>';
 
     return html
@@ -26,7 +28,7 @@ function updateGoods(){
     var input2 = document.getElementById('goods-sold');
     var input3 = document.getElementById('goods-bought');
     var input4 = document.getElementById('goods-contraband');
-    var newObj= {id:'',name:'',soldAt:'',buyAt:'',contraband:''};
+    var newObj= {id:'',name:'',soldAt:'',cost:'',buyAt:'',price:'',contraband:''};
     newObj.name = input.value;
     newObj.soldAt = input2.value;
     newObj.buyAt = input3.value;
@@ -58,13 +60,13 @@ function openModal(){
 
 var goods = [
 
-    {id: '', name:'Obtanium Ore', soldAt:'Texas', buyAt:'Dutch', contraband: false },
-    {id: '', name:'Processors', soldAt:'', buyAt:'', contraband: false},
-    {id: '', name:'Progenitor Shard', soldAt:'', buyAt:'', contraband: 'no'},
-    {id: '', name:'Pulp Novel', soldAt:'', buyAt:'', contraband: 'no'},
-    {id: '', name:'Pure Water', soldAt:'', buyAt:'', contraband: 'no'},
+    {id: '', name:'Obtanium Ore', soldAt:'Texas', cost:'2000',  buyAt:'Dutch',price:'2500', contraband: false },
+    {id: '', name:'Processors', soldAt:'Backbone', cost: '300', buyAt:'Montana',price: '400', contraband: false},
+    {id: '', name:'Progenitor Shard', soldAt:'', cost: '5000',buyAt:'Backbone',price:'7500', contraband: 'no'},
+    {id: '', name:'Pulp Novel', soldAt:'Sexton',cost:'250', buyAt:'Lousiana',price:'300', contraband: 'no'},
+    {id: '', name:'Pure Water', soldAt:'Colorado',cost:'2500', buyAt:'Texas',price:'2800', contraband: 'no'},
 
-    {id: '', name:'Void', soldAt:'', buyAt:'',contraband:'Yes'}
+    {id: '', name:'Void', soldAt:'',cost:'7800', buyAt:'',price:'9000',contraband:'Yes'}
 ];
 
 var tbody = document.querySelector('#goods');
