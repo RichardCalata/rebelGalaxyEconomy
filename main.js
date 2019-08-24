@@ -28,7 +28,7 @@ function updateGoods(){
     var input2 = document.getElementById('goods-sold');
     var input3 = document.getElementById('buy-price');
     var input4 = document.getElementById('goods-bought');
-    var input5 = document.getElementById('buy-price');
+    var input5 = document.getElementById('sell-price');
     var input6 = document.getElementById('goods-contraband');
     var newObj= {id:'',name:'',soldAt:'',cost:'', availableAt: '',price:'',contraband:''};
     newObj.name = input.value;
