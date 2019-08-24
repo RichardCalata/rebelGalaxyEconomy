@@ -12,6 +12,10 @@ body {
 table {
     border-collapse: collapse;
     margin:auto;
+    border:solid black 1px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+
 }
 
 h1 {
@@ -72,4 +76,5 @@ td, th {
 
 input[type='text'], textarea {
     background-color: palegoldenrod;
+    border-radius: 5px;
 }
