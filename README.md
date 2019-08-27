@@ -4,4 +4,4 @@
 commodities tracking for Rebel Galaxy Outlaw
 
 
-note: change the form
+This idea might be better served using mysql. 

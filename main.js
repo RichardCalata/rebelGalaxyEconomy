@@ -41,6 +41,10 @@ function updateGoods(){
     return goods
 }
 
+function editGood(){
+
+}
+
 function updateScreen(e){
     e.preventDefault();
     tbody.innerHTML = renderGoods(goods);
