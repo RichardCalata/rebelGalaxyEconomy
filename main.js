@@ -1,24 +1,30 @@
 "use strict";
 
-function renderGood(good) {
-    var html = '<tr class="good">';
-    html += '<td>' +  '<input type="submit" id="edit" value="edit" href="modal" onclick="openM()"{\n' +
-        '    modal.style.display = "block";\n' +
-        '}">'+ '</td>';
-    html += '<td>' + good.name + '</td>';
-    html += '<td>' + good.soldAt + '</td>';
-    html += '<td>' + good.cost + '</td>';
-    html += '<td>' + good.buyAt + '</td>';
-    html += '<td>' + good.price + '</td>';
-    html += '<td>' + good.contraband + '</td>';
-
-    return html
-}
+// function renderGood(good) {
+//     var html = '';
+//     html += '<tr class="good"><td>   <input type="submit" id="edit" value="edit" href="modal" onclick="openM()"{\n' +
+//         '    modal.style.display = "block";\n' +
+//         '}">'+ '</td>';
+//     html += '<td>' + good.name + '</td>';
+//     html += '<td>' + good.soldAt + '</td>';
+//     html += '<td>' + good.cost + '</td>';
+//     html += '<td>' + good.buyAt + '</td>';
+//     html += '<td>' + good.price + '</td>';
+//     html += '<td>' + good.contraband + '</td></tr>';
+//
+//     return html
+// }
 
 function renderGoods(goods){
     var html = '';
-    for(var i = 0; i<goods.length; i++){
-        html += renderGood(goods[i]);
+    for(let good of goods){
+        html += `<tr><td><input type="submit" value="edit" id="${good.id}"></td>`;
+        html += `<td>${good.name}</td>`;
+        html += `<td>${good.soldAt}</td>`;
+        html += `<td>${good.cost}</td>`;
+        html += `<td>${good.buyAt}</td>`;
+        html += `<td>${good.price}</td>`;
+        html += `<td> ${good.contraband}</td></tr>`;
     }
     return html
 }
@@ -85,7 +91,7 @@ tbody.innerHTML = renderGoods(goods);
 
 var modal = document.getElementById("editModal");
 
-var btn = document.getElementById("edit");
+// var btn = document.getElementById(`${good.id`});
 
 var span = document.getElementsByClassName('close')[0];
 
