@@ -18,7 +18,7 @@
 function renderGoods(goods){
     var html = '';
     for(let good of goods){
-        html += `<tr><td><input type="submit" value="edit" id="${good.id}"></td>`;
+        html += `<tr><td><input type="submit" value="EDIT" >${good.id}</td>`;
         html += `<td>${good.name}</td>`;
         html += `<td>${good.soldAt}</td>`;
         html += `<td>${good.cost}</td>`;
@@ -90,12 +90,13 @@ submitButton.addEventListener('click',updateScreen);
 tbody.innerHTML = renderGoods(goods);
 
 var modal = document.getElementById("editModal");
-
-// var btn = document.getElementById(`${good.id`});
+// how can I get this element ID?
+// var btn = document.getElementById(`${goods.id}`);
 
 var span = document.getElementsByClassName('close')[0];
 
-function openM(){
+btn.onclick = function openM(e){
+    e.preventDefault();
     modal.style.display = "block";
 };
 
